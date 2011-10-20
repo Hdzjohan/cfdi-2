@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2ABB310C-85D0-4C12-91AC-18B4D58ED2DB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>omarkhd.Cfdi</RootNamespace>
+    <AssemblyName>omarkhd.Cfdi</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="omarkhd.DataStructures">
+      <HintPath>..\..\dlls\omarkhd.DataStructures.dll</HintPath>
+    </Reference>
+    <Reference Include="omarkhd.Cfdi.TimbreFiscal">
+      <HintPath>..\..\omarkhd\omarkhd.Cfdi.TimbreFiscal\omarkhd.Cfdi.TimbreFiscal\bin\Debug\omarkhd.Cfdi.TimbreFiscal.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Cfdi.cs" />
+    <Compile Include="Excepciones.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="Emisor.cs" />
+    <Compile Include="Contribuyente.cs" />
+    <Compile Include="DomicilioFiscal.cs" />
+    <Compile Include="Receptor.cs" />
+    <Compile Include="Concepto.cs" />
+    <Compile Include="ConceptosHandler.cs" />
+    <Compile Include="ListWrapper.cs" />
+    <Compile Include="Impuesto.cs" />
+    <Compile Include="Retencion.cs" />
+    <Compile Include="Traslado.cs" />
+    <Compile Include="ImpuestosHandler.cs" />
+    <Compile Include="Timbre.cs" />
+    <Compile Include="Timbrado.cs" />
+    <Compile Include="TimbradoDiverza.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>
